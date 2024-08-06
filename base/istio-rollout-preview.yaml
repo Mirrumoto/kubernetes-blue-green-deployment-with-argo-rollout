@@ -9,6 +9,7 @@ spec:
   gateways:
   - istio-system/services-ingress-gateway
   http:
+  - name: rollout-bluegreen-active
     route:
     - destination:
         host: rollout-bluegreen-preview
