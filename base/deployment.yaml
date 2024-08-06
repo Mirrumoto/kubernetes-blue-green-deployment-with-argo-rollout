@@ -20,9 +20,9 @@ spec:
         image: argoproj/rollouts-demo:yellow
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
   strategy:
     blueGreen: 
-      activeService: rollout-bluegreen-active 
+      activeService: rollout-bluegreen-active
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false

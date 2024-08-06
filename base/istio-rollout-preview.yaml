@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: bg-preview
+spec:
+  hosts:
+  - "*.preview.sb01.nonprod.techmobile.spectrum.net"
+  - "preview.sb01.nonprod.techmobile.spectrum.net"
+  gateways:
+  - istio-system/services-ingress-gateway
+  http:
+    route:
+    - destination:
+        host: rollout-bluegreen-preview
+        port:
+          number: 80

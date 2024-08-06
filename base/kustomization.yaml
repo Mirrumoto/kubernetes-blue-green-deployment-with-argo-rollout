@@ -8,3 +8,5 @@ resources:
   - deployment.yaml
   - active-service.yaml
   - preview-service.yaml
+  - istio-rollout-active.yaml
+  - istio-rollout-preview.yaml
