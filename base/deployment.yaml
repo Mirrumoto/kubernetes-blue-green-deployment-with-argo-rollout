@@ -17,7 +17,7 @@ spec:
       - name: rollouts-demo
         # image: argoproj/rollouts-demo:blue
         # image: argoproj/rollouts-demo:green
-        image: argoproj/rollouts-demo:blue
+        image: argoproj/rollouts-demo:yellow
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -27,3 +27,9 @@ spec:
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
       previewReplicaCount: 2
+      prePromotionAnalysis:
+        templates:
+        - templateName: rates
+        args:
+        - name: service-name
+          value: rollout-bluegreen-preview.rollout-demo.svc.cluster.local
