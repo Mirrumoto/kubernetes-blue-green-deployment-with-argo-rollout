@@ -27,6 +27,3 @@ spec:
       previewService: rollout-bluegreen-preview
       autoPromotionEnabled: false
       previewReplicaCount: 2
-        args:
-        - name: service-name
-          value: rollout-bluegreen-preview.rollout-demo.svc.cluster.local
