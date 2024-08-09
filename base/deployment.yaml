@@ -29,7 +29,7 @@ spec:
       previewReplicaCount: 2
       prePromotionAnalysis:
         templates:
-        - templateName: error-rate
+        - templateName: rates
         args:
         - name: service-name
           value: rollout-bluegreen-preview
