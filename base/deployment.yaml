@@ -32,4 +32,4 @@ spec:
         - templateName: rates
         args:
         - name: service-name
-          value: rollout-bluegreen-preview.rollout-demo.svc.cluster.local
+          value: rollout-bluegreen-preview
