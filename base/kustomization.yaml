@@ -10,4 +10,3 @@ resources:
   - preview-service.yaml
   - istio-rollout-active.yaml
   - istio-rollout-preview.yaml
-  - rollout-analysis.yaml
