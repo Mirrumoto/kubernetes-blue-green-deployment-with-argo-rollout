@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: bg-active
+spec:
+  hosts:
+  - "*.dashboard.sb01.nonprod.techmobile.spectrum.net"
+  - "dashboard.sb01.nonprod.techmobile.spectrum.net"
+  gateways:
+  - istio-system/services-ingress-gateway
+  http:
+  - name: argo-rollouts-dashboard
+    route:
+    - destination:
+        host: argo-rollouts-dashboard
+        port:
+          number: 3100
