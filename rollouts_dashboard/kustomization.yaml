@@ -7,6 +7,7 @@ resources:
 - dashboard-deployment.yaml
 - dashboard-service.yaml
 - dashboard-serviceaccount.yaml
+- istio-rollout-dashboard.yaml
 images:
 - name: quay.io/argoproj/kubectl-argo-rollouts
   newTag: latest
